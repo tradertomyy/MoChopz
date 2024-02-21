@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mo.chopz Barber Shop</title>
+</head>
+<body>
+
+    <header>
+        <h1></h1>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#about" onclick="selectMenuItem('#about')">About Us</a></li>
+                <li><a href="#haircuts" onclick="selectMenuItem('#haircuts')">Haircuts</a></li>
+                <li><a href="#location" onclick="selectMenuItem('#location')">Location</a></li>
+                <li><a href="#contactus" onclick="selectMenuItem('#contactus')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Mo.chopz, where we take pride in providing top-notch grooming services. Our skilled barbers are dedicated to helping you look and feel your best.</p>
+    </section>
+
+    <section id="haircuts" class="services">
+        <div class="service">
+            <h2>Haircuts</h2>
+            <p>Expert haircuts tailored to your style.</p>
+        </div>
+    </section>
+
+    <section id="location" class="map">
+        <h2>Location</h2>
+        <p>Visit us at: 125 S 156th St, Burien, WA 98148</p>
+        <p><a href="https://www.google.com/maps?q=125+S+156th+St+Burien+WA+98148" target="_blank">View on Google Maps</a></p>
+    </section>
+
+    <section id="contactus">
+        <h2>Contact Us</h2>
+        <p>You can book your appointment by calling us at: <a href="tel:206-432-2832">206-432-2832</a></p>
+
+        <h3 style="font-weight: bold; font-size: 1.1em;">Business Hours</h3>
+        <p>Mon: Closed</p>
+        <p>Tue: 10:00 AM – 6:00 PM</p>
+        <p>Wed: 10:00 AM – 6:00 PM</p>
+        <p>Thu: 10:00 AM – 6:00 PM</p>
+        <p>Fri: 10:00 AM – 6:00 PM</p>
+        <p>Sat: 10:00 AM – 3:00 PM</p>
+        <p>Sun: Closed</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mo.chopz Barber Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            var navigation = document.querySelector('.navigation');
+            navigation.style.display = (navigation.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function selectMenuItem(targetSection) {
+            var navigation = document.querySelector('.navigation');
+            navigation.style.display = 'none';
+            document.querySelector(targetSection).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
+</body>
+</html>
