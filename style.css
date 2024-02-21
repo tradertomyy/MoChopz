@@ -12,15 +12,41 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: midnightblue;
     color: white;
-    text-align: center;
     padding: 1em;
-    height: 150px;
-    background-image: url('logo.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 40px; /* Adjust the size as needed */
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 section {

@@ -8,22 +8,24 @@
 </head>
 <body>
 
-    <header>
-        <h1></h1>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#about" onclick="selectMenuItem('#about')">About Us</a></li>
-                <li><a href="#haircuts" onclick="selectMenuItem('#haircuts')">Haircuts</a></li>
-                <li><a href="#location" onclick="selectMenuItem('#location')">Location</a></li>
-                <li><a href="#contactus" onclick="selectMenuItem('#contactus')">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header>
+		<div class="logo-container">
+			<img src="logo.png" alt="Logo">
+			<h1>Mo.chopz Barber Shop</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to Mo.chopz, where we take pride in providing top-notch grooming services. Our skilled barbers are dedicated to helping you look and feel your best.</p>
+        <h2>Dedicated to helping you look and feel your best.</h2>
     </section>
 
     <section id="haircuts" class="services">
@@ -33,11 +35,12 @@
         </div>
     </section>
 
-    <section id="location" class="map">
-        <h2>Location</h2>
-        <p>Visit us at: 125 S 156th St, Burien, WA 98148</p>
-        <p><a href="https://www.google.com/maps?q=125+S+156th+St+Burien+WA+98148" target="_blank">View on Google Maps</a></p>
-    </section>
+	<section id="location" class="map">
+		<h2>Location</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2697.396485294375!2d-122.3347433236151!3d47.46270267117705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490449fba7c4129%3A0xcaa1ab1e6c1cbfe0!2s125%20S%20156th%20St%2C%20Burien%2C%20WA%2098148!5e0!3m2!1sen!2sus!4v1708528912319!5m2!1sen!2sus" width="40%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<h3>Visit us at: 125 S 156th St, Burien, WA 98148</h3>
+		<p><a href="https://www.google.com/maps?q=125+S+156th+St+Burien+WA+98148" target="_blank">View on Google Maps</a></p>
+	</section>
 
     <section id="contactus">
         <h2>Contact Us</h2>
@@ -54,25 +57,15 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Mo.chopz Barber Shop. All rights reserved.</p>
-    </footer>
+		<div class="social-icons">
+			<a href="https://www.instagram.com/mo.chopz" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+			<a href="https://www.tiktok.com/@mo.chops" target="_blank"><img src="tiktok.png" alt="TikTok"></a>
+		</div>
+		<p>&copy; 2024 Mo.chopz Barber Shop. All rights reserved.</p>
+	</footer>
 
     <script src="script.js"></script>
     <script>
-        function toggleMenu() {
-            var navigation = document.querySelector('.navigation');
-            navigation.style.display = (navigation.style.display === 'block') ? 'none' : 'block';
-        }
-
-        function selectMenuItem(targetSection) {
-            var navigation = document.querySelector('.navigation');
-            navigation.style.display = 'none';
-            document.querySelector(targetSection).scrollIntoView({ behavior: 'smooth' });
-        }
-
-        window.onload = function () {
-            window.scrollTo(0, 0);
-        };
     </script>
 </body>
 </html>
