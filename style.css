@@ -172,4 +172,13 @@ h2 {
     z-index: 2;
 }
 
+nav a.book-appointment-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
 
+nav a.book-appointment-btn:hover {
+    background-color: #f0f0f0; /* Add a subtle hover effect */
+}
